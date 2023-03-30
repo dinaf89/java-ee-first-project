@@ -9,16 +9,18 @@ public class HelloServlet extends HttpServlet {
     private String message;
 
     public void init() {
-        message = "Hello World!";
+        message = "Hello! ";
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
+        String firstName = request.getParameter("firstname");
+        String lastName = request.getParameter("lastname");
 
         // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
+        out.println("<h1>" + message + firstName + " " + lastName + "</h1>");
         out.println("</body></html>");
     }
 

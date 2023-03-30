@@ -1,4 +1,6 @@
-
+<%@page import="java.util.List" %>
+<%@ page import="java.util.Arrays" %>
+<%@ page import="com.dinafinkel.javaeetest.logic.TestClass" %>
 <%--
   Created by IntelliJ IDEA.
   User: dinarik
@@ -15,10 +17,11 @@
     <h1>Testing JSP</h1>
     <p>
         <%
-            for (int i = 0; i <= 3; i++) {
-                out.println("<p>" + "Hello Dina " + i + "</p>");
-            }
+            String name = request.getParameter("firstname");
+            String lastname = request.getParameter("lastname");
+            out.println("Hello " + name + " " + lastname + "  jsp");
         %>
+
     </p>
 </body>
 </html>

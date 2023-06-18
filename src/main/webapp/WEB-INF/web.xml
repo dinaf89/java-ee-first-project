@@ -3,14 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    <servlet>
-        <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>com.dinafinkel.javaeetest.HelloServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>HelloServlet</servlet-name>
-        <url-pattern>/hello_world</url-pattern>
-    </servlet-mapping>
+    
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+<!--    <servlet>-->
+<!--        <servlet-name>HelloServlet</servlet-name>-->
+<!--        <servlet-class>com.dinafinkel.javaeetest.HelloServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>HelloServlet</servlet-name>-->
+<!--        <url-pattern>/test_servlet</url-pattern>-->
+<!--    </servlet-mapping>-->
     <servlet>
         <servlet-name>FirstJsp</servlet-name>
         <jsp-file>/first_jsp.jsp</jsp-file>
@@ -19,4 +23,40 @@
         <servlet-name>FirstJsp</servlet-name>
         <url-pattern>/hello_world_jsp</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>Redirect_and_Forward</servlet-name>
+        <jsp-file>/test_jsp.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Redirect_and_Forward</servlet-name>
+        <url-pattern>/test_jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SetCookiesServlet</servlet-name>
+        <servlet-class>com.dinafinkel.javaeetest.SetCookiesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetCookiesServlet</servlet-name>
+        <url-pattern>/set-cookies</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetCookiesServlet</servlet-name>
+        <servlet-class>com.dinafinkel.javaeetest.GetCookiesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetCookiesServlet</servlet-name>
+        <url-pattern>/get-cookies</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteCookiesServlet</servlet-name>
+        <servlet-class>com.dinafinkel.javaeetest.DeleteCookiesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteCookiesServlet</servlet-name>
+        <url-pattern>/delete-cookies</url-pattern>
+    </servlet-mapping>
+
 </web-app>

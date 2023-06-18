@@ -1,6 +1,5 @@
 <%@page import="java.util.List" %>
 <%@ page import="java.util.Arrays" %>
-<%@ page import="com.dinafinkel.javaeetest.logic.TestClass" %>
 <%--
   Created by IntelliJ IDEA.
   User: dinarik
